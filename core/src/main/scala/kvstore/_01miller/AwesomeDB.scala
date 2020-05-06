@@ -20,7 +20,8 @@ class AwesomeDB {
 
   val data = Map.empty[Key, Any]
 
-  def get(key: Key): Option[key.Value]      = data.get(key).asInstanceOf[Option[key.Value]]
+  def get(key: Key): Option[key.Value] = data.get(key).asInstanceOf[Option[key.Value]]
+  @com.github.ghik.silencer.silent("discarded non-Unit value")
   def set(key: Key)(value: key.Value): Unit = data.updated(key, value): Unit
 }
 
